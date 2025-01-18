@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body div{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+
+            height: 70vh;
+            width: 100vw;
+            background: url(pexels-photo-4386326.webp) no-repeat; 
+            background-size: cover;
+            background-size: auto;
+            
+        }
+        div> h1{
+            height: 30px;
+            flex: content;
+            color: black;
+            background-color: rgba(0, 0, 0, 0.274);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>soma</h1>
+        <script>
+            let n1 = prompt('Digite um numero')
+            n1 =  parseFloat (n1)
+            let n2 =  prompt('Digite outro numero')
+            n2 = parseFloat (n2)
+            let soma = n1 + n2
+            let divisao = n1 / n2
+            let mult = n1 * n1
+            alert ('A soma dos numeros digitados é : ' + soma)
+            alert ('A divisao dos numeros digitados é : ' + divisao)
+            alert ('Os numeros multiplicados é : ' + mult)
+        </script>
+    </div>
+</body>
+</html>
