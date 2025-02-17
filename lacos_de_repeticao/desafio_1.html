@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio dado</title>
+</head>
+<body>
+    <h1>Jogue os Dados</h1>
+    <script>
+         let n1 = parseInt(Math.random()*6 +1)
+         let n2 = parseInt(Math.random()*6+1)
+
+         let cont = 1
+
+        while(n2 != n1){
+            console.log(n1,n2)
+            cont++
+            n1 = parseInt(Math.random()*6 +1)
+            n2 = parseInt(Math.random()*6+1)
+           
+        }
+        console.log(`Os dados foram jogados ${cont} vezes. E o numero repetido foi ${cont}`)
+
+        console.log('------------')
+
+         n1 = parseInt(Math.random()*6 +1)
+         n2 = parseInt(Math.random()*6+1)
+
+         cont = 1
+
+        do{
+            console.log(n1,n2)
+            cont++
+            n1 = parseInt(Math.random()*6 +1)
+            n2 = parseInt(Math.random()*6+1)
+           
+        }while(n1!=n2)
+        console.log(`Os dados foram jogados ${cont} vezes. E o numero repetido foi ${cont}`)
+
+    </script>
+</body>
+</html>
