@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body>
+    <h1>Desafio 3</h1>
+    <script>
+        for(let ano = 1004; ano<=2025; ano+=4){
+            let anoBissexto =  ano %100 !=0 || ano % 400===0
+            if(anoBissexto){
+                document.write(`${ano} é ano bissexto <br>`)
+            }else{
+                document.write(`${ano} nao é ano bissexto <br>`)
+            }
+           
+        }
+
+
+
+    </script>
+</body>
+</html>
