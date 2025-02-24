@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body>
+    <h1>Desafio: null, undefined, NaN</h1>
+    <script>
+        
+        const qualquer = [ 1, 2, 5,7 ]
+        let check=false
+        for(let i = 0; i< qualquer.length; i++){
+            let n = qualquer[i]
+            if(n===null || n===undefined || isNaN(n)){
+                check=true
+                break
+            }
+        }
+        alert("Encontrou null. undefined ou NaN?"+ check)
+    </script>
+</body>
+</html>
