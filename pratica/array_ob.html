@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array_Objeto</title>
+</head>
+<body>
+    <h1>Array e Objetos</h1>
+    <ul id="estoque">
+
+    </ul>
+    <script>
+        const listaLoja= [
+            {modelo: "casaco",cor:"roxo", tamanho:"G",grade:100},
+            {modelo: "cardigan",cor:"verde",tamanho:"M",grade:100,},
+            {modelo:"t-shirt",cor:"preto", tamanho:"P",grade:100, },
+            {modelo:"pull over",cor:"nude", tamanho:"M",grade:100, },
+            {modelo:"saia",cor:"off", tamanho:"P",grade:100, },
+        ]
+
+        const estoqueLoja = document.getElementById("estoque")
+
+        for(let i =  0; i<listaLoja.length; i++){
+            estoqueLoja.innerHTML+= ` <li>${listaLoja[i].modelo} - ${listaLoja[i].cor} - Tamanho: ${listaLoja[i].tamanho}- Grade: ${listaLoja[i].grade}</li>`
+        }
+        console.log(listaLoja)
+    </script>
+</body>
+</html>

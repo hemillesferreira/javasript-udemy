@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array_Objeto</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        table, th, td{
+            border:1px solid
+        }
+        td,td{
+            padding: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array e Objetos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Modelo</th>
+                <th>Cor</th>
+                <th>Tamanho</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaProduto">
+         
+        </tbody>
+    </table>
+    <script>
+        const listaLoja= [
+            {modelo: "casaco",cor:"roxo", tamanho:"G",grade:100},
+            {modelo: "cardigan",cor:"verde",tamanho:"M",grade:100,},
+            {modelo:"t-shirt",cor:"preto", tamanho:"P",grade:100, },
+            {modelo:"pull over",cor:"nude", tamanho:"M",grade:100, },
+            {modelo:"saia",cor:"off", tamanho:"P",grade:100, }
+        ]
+
+        const estoqueLoja = document.getElementById("tabelaProduto")
+
+        for(let i =  0; i<listaLoja.length; i++){
+            estoqueLoja.innerHTML+=
+               `<tr>
+                    <td>${ listaLoja[i].modelo}</td>
+                    <td>${ listaLoja[i].cor}</td>
+                    <td>${ listaLoja[i].tamanho}</td>
+                    <td>${ listaLoja[i].grade}</td>
+               </tr>`
+        }
+        console.log(listaLoja)
+    </script>
+</body>
+</html>
