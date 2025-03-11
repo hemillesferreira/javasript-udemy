@@ -18,18 +18,10 @@
 
         const listaAlunos = document.getElementById("listaAlunos")
         let  alunosHTML=""
-        let media = 0
-        for (let i = 0 ; i<alunos.length;i++){
-            alunosHTML+= `<li> ${alunos[i].nome}`
-              alunosHTML+= "<ul>"
-                for(let j = 0; j<alunos[i].notas.length;j++){
-                    alunosHTML+=`<li> ${alunos[i].notas[j]}</li>`
-                }
-              alunosHTML+="</ul>"
-             alunosHTML+="</li>"
+        for(let i = 0; i<alunos.length; i++){
+            alunosHTML+=`<li> ${alunos[i].nome}</li>`
         }
         listaAlunos.innerHTML=alunosHTML
-        
 
     </script>
 </body>
