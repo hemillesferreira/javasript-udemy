@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangulo</title>
+</head>
+<body>
+    <h1>Calcular Triangulo</h1>
+    <label >Raio
+        <input type="number" id="raio">
+    </label>
+    <button onclick="mostrarAreaDoPrompt()" >Calcular Area do Prompt</button>
+    <button onclick="mostrAreaDoInput()" >Calcular Area do Input</button>
+    <br>
+    <output id="outputprompt"></output>
+    <br>
+    <output id="outputinput"></output>
+
+    <script>
+        let raio = document.getElementById("raio")
+        let outputprompt = document.getElementById("outputprompt")
+        let outputinput = document.getElementById("outputinput")
+
+        function mostrarAreaDoPrompt(){
+            
+           let raioValue = parseFloat(prompt("digite o raio"))
+           const pi = Math.PI
+           let area = pi * raioValue * raioValue
+           outputprompt.innerHTML= `A 
+            area da circunferencia de raio ${raioValue} é ${area} `
+        }
+
+        function mostrAreaDoInput(){
+            
+            let raioValue = raio.value
+            const pi = Math.PI
+            let area = pi * raioValue * raioValue
+            outputinput.innerHTML= `A 
+            area da circunferencia de raio ${raioValue} é ${area} `
+         }
+    </script>
+    
+</body>
+</html>

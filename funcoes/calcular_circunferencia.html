@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangulo</title>
+</head>
+<body>
+    <h1>Calcular Triangulo</h1>
+    <label >Raio
+        <input type="number" id="raio">
+    </label>
+    <button onclick="mostrArea()" >Calcular Area</button>
+    <br>
+    <output id="output"></output>
+
+    <script>
+        let raio = document.getElementById("raio")
+        let output = document.getElementById("output")
+
+        function mostrArea (){
+            
+           let raioValue = parseFloat(raio.value)
+           const pi = Math.PI
+           let area = pi * raioValue * raioValue
+           output.innerHTML= `A area da circunferencia de raio ${raioValue} é ${area} `
+        }
+     
+    </script>
+    
+</body>
+</html>
