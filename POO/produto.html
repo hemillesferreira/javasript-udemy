@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio POO</title>
+</head>
+<body>
+    <h1>Desafio POO</h1>
+
+    <script>
+
+        class Produto{
+            #estoque
+            constructor(nome){
+                this.nome=nome
+                this.#estoque=0
+            }
+
+            comprar(quantidade){
+                if(quantidade<this.#estoque){
+                    this.#removerDoEstoque(quantidade)
+                    console.log(`O estoque de ${this.nome} foi atualizado`)
+                }else{
+                    console.log("quantidade insuficiente")
+                }
+            }
+
+            adicionarAoEstoque(quantidade){
+                this.#estoque+=quantidade
+            }
+            #removerDoEstoque(quantidade){
+                this.#estoque-=quantidade
+            }
+        }
+        const caneta = new Produto ("caneta")
+        caneta.adicionarAoEstoque(10)
+        caneta.comprar(2)
+
+    </script>
+</body>
+</html>
