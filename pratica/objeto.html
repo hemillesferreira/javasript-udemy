@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto</title>
+</head>
+<body>
+    
+    <h1>Objeto</h1>
+
+    <script>
+
+        class mercadoria{
+            constructor(modelo,cor, qtd){
+                this.modelo=modelo
+                this.cor=cor
+                this.qtd=qtd
+            }
+             comprar(qtd){
+                this.quantidade -=qtd
+             }
+        }
+         const regata = new mercadoria("regata", "preta", 100)
+         console.log(regata)
+    </script>
+
+</body>
+</html>
