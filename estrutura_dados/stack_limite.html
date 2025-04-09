@@ -10,11 +10,17 @@
     <script>
     
     class Pilha{
-        constructor(){
+        constructor(tamanhoLimite){
+            if(tamanhoLimite && tamanhoLimite<=0)
+            throw new Error ("Limite nao pode ser menor ou igual a zero")
             this.pilha=[]
+            this.limite = tamanhoLimite || null
         }
 
         adicionar(novoElemento){
+            if(this.limite !== null && this.tamanho === this.limite){
+                throw new Error ("Tamanho da pilha atingido")
+            }
             this.pilha.push(novoElemento)
         }
 
