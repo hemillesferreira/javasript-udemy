@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fila | Queue</title>
+</head>
+<body>
+    
+    <script>
+    
+    class Fila{
+        constructor(){
+            this.fila=[]
+        }
+
+        //enfileirar elemento na filaa
+        enfileirar(novoElemento){
+            this.fila.push(novoElemento)
+            
+        }
+
+        //desenfileirar elemento da fila
+        desenfileirar(){
+            if(this.estaVazia()){
+                throw new Error ("A Fila esta vazia")
+            }
+            return this.fila.shift()
+        }
+
+        //verificar se a fila esta vazia
+        estaVazia(){
+            return this.fila.length ===0
+
+        }
+
+        //espiar o primeiro elemento da fila
+        espiar(){
+            return this.fila[0] || null
+
+        }
+
+        //limpar a fila
+        limpar(){
+            this.fila.length = 0
+
+        }
+
+        //obter o numero de elementos da fila
+        get tamanho(){
+            return this.fila.length
+        }
+    }
+    const minhaFila = new Fila()
+    console.log(minhaFila.estaVazia())
+    minhaFila.enfileirar("Primeiro")
+    minhaFila.enfileirar("Segundo")
+    minhaFila.enfileirar("Terceiro")
+    console.log(minhaFila.espiar())
+    console.log(minhaFila.desenfileirar())
+    console.log(minhaFila.tamanho)
+    console.log(minhaFila.estaVazia())
+    minhaFila.limpar()
+    console.log(minhaFila.estaVazia())
+
+   
+
+
+    </script>
+
+</body>
+</html>
